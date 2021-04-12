@@ -6,8 +6,8 @@ import Loading from "./Loading";
 const VideoList = () => {
   const { loading, videos } = useGlobalContext();
 
-  if (loading) {
-    <Loading />;
+  if (videos.length < 1) {
+    return <h1 className="no-video">Please make a search</h1>;
   }
 
   const renderedList = videos.map((video) => {

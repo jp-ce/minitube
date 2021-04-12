@@ -86,7 +86,7 @@ const AppProvider = ({ children }) => {
   //use these to use app with local mock data, comment out the useState for both searchTerm and videos above,
   //then uncomment these ones below
   // const [searchTerm, setSearchTerm] = useState("buildings");
-  // const [videos, setVideos] = useState(mockVideoData);
+  // const [videos, setVideos] = useState([]);
 
   const addHistory = (payload) => {
     let oldHistory = history;
