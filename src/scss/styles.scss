@@ -1,0 +1,353 @@
+@import "config";
+@import "utilities";
+
+nav {
+  max-width: $bodyMaxWidth;
+  min-width: $bodyMinWidth;
+  width: 100%;
+  margin: 0 auto;
+  height: 7rem;
+  background-color: $primaryBackgroundColor;
+
+  .search-hide {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: $navWidth;
+    max-width: $navMaxWidth;
+    margin: auto;
+    padding-top: 1.5rem;
+    color: $primaryLightTextColour;
+
+    .logo {
+      font-size: 2.8rem;
+      letter-spacing: 0.1rem;
+      &-span {
+        background-color: $primaryShadeColour;
+        border-radius: $secondaryBorderRadius;
+        padding-left: 0.13rem;
+      }
+    }
+
+    //--------------------- SEARCH BAR ---------------------
+
+    .search-main {
+      width: $searchWidth;
+      max-width: $searchMaxWidth;
+
+      text-transform: capitalize;
+
+      .form-control-minimized {
+        display: none;
+      }
+
+      .form-control {
+        display: flex;
+
+        input {
+          flex-basis: 90%;
+          border: none;
+          border-color: transparent;
+
+          padding: 1rem;
+          border-bottom-right-radius: 0.4rem;
+
+          font-size: 1.2rem;
+        }
+
+        button {
+          background-color: rgb(29, 28, 28);
+          border: none;
+          border-top-right-radius: 0.4rem;
+          border-bottom-right-radius: 0.4rem;
+          flex-basis: 10%;
+          cursor: pointer;
+          color: white;
+        }
+
+        &:hover {
+          input {
+            background-color: darken(white, 10%);
+          }
+          button {
+            background-color: darken(rgb(29, 28, 28), 5%);
+          }
+        }
+      }
+    }
+
+    .nav-tab {
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: $mainSpacing;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// ------------------------- DASH BOARD ------------------------
+
+.section-dashboard {
+  min-width: $bodyMinWidth;
+  display: flex;
+  max-width: $bodyMaxWidth;
+  margin: auto;
+  max-height: 1080px;
+  height: 1080px;
+
+  .sidebar {
+    flex-basis: 15%;
+    background-color: $primaryBackgroundColor;
+    padding-top: 5rem;
+    height: 100%;
+    min-width: 200px;
+
+    &-tabs,
+    .explore-tabs {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-size: 2rem;
+      padding-top: 2rem;
+
+      a {
+        padding: 1.5rem;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+          background-color: $activeTabBackground;
+          border-radius: $mainBorderRadius;
+          width: 95%;
+        }
+      }
+    }
+
+    .explore-tabs {
+      .explore-genres {
+        max-width: 220px;
+        display: flex;
+        flex-wrap: wrap;
+        button {
+          margin: 1rem 1rem;
+          font-size: 1.5rem;
+          border: none;
+          border-radius: $mainBorderRadius;
+          background-color: lighten($secondaryBackgroundColor, 60%);
+          color: darken($primaryLightTextColour, 80%);
+          padding: 0.2rem 0.4rem;
+          text-transform: capitalize;
+          cursor: pointer;
+          transition: $mainTransition;
+
+          &:hover {
+            background-color: $activeTabBackground;
+            color: $primaryLightTextColour;
+          }
+        }
+      }
+    }
+
+    .active-tab {
+      width: 95%;
+      text-align: center;
+      background-color: $activeTabBackground;
+      border-radius: $mainBorderRadius;
+    }
+  }
+
+  .video-list {
+    flex-basis: 85%;
+
+    .video-container {
+      display: flex;
+
+      flex-wrap: wrap;
+      width: 90%;
+      margin: auto;
+      padding-top: 2rem;
+
+      .video-item {
+        width: 35rem;
+        height: 28rem;
+        margin: 1.5rem auto;
+        box-shadow: $lightShadow;
+        cursor: pointer;
+        transition: $mainTransition;
+
+        &:hover {
+          background-color: $activeTabBackground;
+        }
+
+        img {
+          object-fit: cover;
+          width: 100%;
+
+          height: 20rem;
+        }
+
+        .content {
+          height: 8rem;
+          width: 100%;
+          color: $secondaryLightTextColour;
+          padding: 0 0.6rem;
+
+          .video-header {
+            padding-top: 0.7rem;
+            font-size: 1.8rem;
+            color: $primaryLightTextColour;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 500;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+          }
+          .video-channel {
+            padding-top: 0.5rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ---------------- VIDEO PLAY ----------------------
+.video-player {
+  min-width: $bodyMinWidth;
+  max-width: $bodyMaxWidth - 10px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+  .video-detail {
+    flex-basis: 70%;
+    min-width: 115rem;
+    margin: 0 auto;
+
+    .video-frame {
+      padding-top: 2rem;
+      display: grid;
+      place-content: left;
+      width: 100%;
+
+      iframe {
+        margin: auto;
+        width: 90%;
+        height: 65rem;
+      }
+    }
+
+    .frame-contents {
+      width: 90%;
+      margin: auto;
+
+      h4 {
+        margin: 2rem 0;
+        font-size: 2.8rem;
+      }
+
+      h2 {
+        margin-top: 1rem;
+        color: darken($primaryLightTextColour, 20%);
+      }
+      p {
+        font-size: 1.5rem;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      button {
+        font-size: 1.7rem;
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .recommended-videos {
+    flex-basis: 30%;
+
+    .recommendations {
+      width: 98%;
+      display: flex;
+      flex-direction: row;
+      margin: 2rem 2rem 0rem 0rem;
+
+      .img-container {
+        flex-basis: 35%;
+
+        img {
+          width: 20rem;
+        }
+      }
+      .side-content {
+        flex-basis: 65%;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        box-shadow: $lightShadow;
+        background-color: lighten($secondaryBackgroundColor, 2%);
+
+        h3 {
+          font-family: "Open Sans", sans-serif;
+        }
+
+        h4 {
+          font-size: 1.3rem;
+          color: $secondaryLightTextColour;
+        }
+      }
+    }
+  }
+}
+
+// ------------- HISTORY && Favourite PAGE ------------------
+
+.secondary-section {
+  min-width: $bodyMinWidth;
+  max-width: 1500px;
+
+  .secondary-item {
+    display: flex;
+
+    margin: 4rem;
+
+    .secondary-img {
+      max-width: 35rem;
+      height: 18rem;
+      img {
+        object-fit: cover;
+        width: 32rem;
+      }
+    }
+
+    .secondary-contents {
+      padding-left: 3rem;
+      padding-top: 1rem;
+
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+
+      h4 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  button {
+    display: grid;
+    place-items: center;
+    margin: 3rem auto;
+
+    font-size: 1.5rem;
+  }
+}
+
+@import "mQueries";

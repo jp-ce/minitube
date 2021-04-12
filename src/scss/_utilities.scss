@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $secondaryBackgroundColor;
+  color: $primaryLightTextColour;
+  min-width: $browserMinWidth;
+}
+
+main {
+  max-width: $bodyMaxWidth;
+  width: 100%;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.25rem;
+  letter-spacing: $mainSpacing;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: $primaryLightTextColour;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.offset::after {
+  display: none;
+}
+
+.btn,
+.btn-white,
+.btn-primary {
+  text-transform: uppercase;
+  letter-spacing: $mainSpacing;
+  color: $primaryShadeColour;
+  border: 2px solid $primaryShadeColour;
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: $mainTransition;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: $mainBorderRadius;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: $primaryShadeColour;
+  color: $primaryLightBackgroundColor;
+}
+
+.btn-primary {
+  background: $primaryShadeColour;
+  color: $primaryLightBackgroundColor;
+  border-color: transparent;
+}
+.btn-primary:hover {
+  background: $primaryLightBackgroundColor;
+  color: $primaryLightTextColour;
+  font-weight: bold;
+}

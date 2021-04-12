@@ -1,0 +1,33 @@
+//colours
+$primaryShadeColour: #d13120;
+$primaryLightTextColour: #eaebee;
+$secondaryLightTextColour: #909194;
+$primaryDarkTextColour: #15141a;
+$primaryLightBackgroundColor: #eaebee;
+$primaryBackgroundColor: #141311;
+$secondaryBackgroundColor: #1b1a1a;
+$mainRed: rgb(148, 24, 24);
+$primaryDangerColor: rgb(197, 130, 130);
+$activeTabBackground: rgba(167, 34, 34, 0.281);
+
+//dimensions
+$browserMinWidth: 320px;
+$bodyMinWidth: 250px;
+
+$bodyMaxWidth: 1920px;
+$bodyWidth: 90vw;
+
+$navMaxWidth: 1800px;
+$navWidth: 95vw;
+
+$searchWidth: 30vw;
+$searchMaxWidth: 60rem;
+
+$mainBorderRadius: 0.25rem;
+$secondaryBorderRadius: 0.5rem;
+
+//misc
+$mainTransition: all 0.3s linear;
+$mainSpacing: 0.2rem;
+$lightShadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+$darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
