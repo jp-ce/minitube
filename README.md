@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# MiniTube
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Image](./public/Readme_image.PNG)
 
-## Available Scripts
+> Pocket YouTube application
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Sections headers used to reference location of destination.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Demo](#demo)
+- [Description](#description)
+- [How To Use](#how-to-use-in-your-local-environment)
+- [API reference](#api-used-reference)
+- [Author Info](#author-info)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+> View demo at: https://mini-tube.netlify.app/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Description
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A miniature version of the ever popular video sharing platform - YouTube. This is a single-paged application project to solidify my understanding on the React.js library. This application makes use of the public YouTube API to display videos based on the search term.
 
-### `npm run eject`
+Its main functionalities are: to display and watch YouTube videos, show related videos based on the video clicked, ability to favourite any chosen videos (using local storage) as well as record the viewing history of the user.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Uses hooks and Context API for state management, react-icons for presentation purposes, axios library for fetching data and react-router-dom library for routing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Visual Code Studio
+- React.js
+- JavaScript
+- Markdown
+- HTML & CSS (SASS)
+- UI/UX
+- Responsive
+- YouTube API
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Back To The Top](#minitube)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How to use in your local environment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Prerequisites
 
-### Code Splitting
+- You must have node.js installed to have npm
+- Clone this repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Installation
 
-### Analyzing the Bundle Size
+`npm install && npm start `
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## API used reference
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+YouTube API: https://developers.google.com/youtube/v3/getting-started
 
-### Advanced Configuration
+[Back To The Top](#minitube)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Author Info
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- linkedIn - [@jpev.dev](https://linkedin.com/in/jianneevangelista)
+- Website - [jp.ev](https://jpce.netlify.app/)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Back To The Top](#minitube)
